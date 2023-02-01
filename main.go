@@ -81,7 +81,7 @@ func init() {
 				continue
 			}
 			if connection.Database == nil && connection.Schema == nil && connection.Host == nil {
-				fmt.Printf("ERROR: no access to the details of connection %s, this command needs to be run with Admin permissions", *connection.Name)
+				fmt.Printf("ERROR: no access to the details of connection %s, this command needs to be run with Admin permissions\n", *connection.Name)
 				continue
 			}
 			connectionJsonBytes, err := json.Marshal(connection)
@@ -93,7 +93,7 @@ func init() {
 			exportConnection := &model.Connection{}
 			err = json.Unmarshal(connectionJsonBytes, exportConnection)
 			if err != nil {
-				fmt.Printf("failed to export connection %s", *connection.Name)
+				fmt.Printf("failed to export connection %s\n", *connection.Name)
 				continue
 			}
 			results = append(results, exportConnection)
