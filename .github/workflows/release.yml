@@ -30,4 +30,4 @@ jobs:
           goversion: 1.19
           goos: ${{ matrix.goos }}
           goarch: ${{ matrix.goarch }}
-          binary_name: "connections-tableau"
+          binary_name: "connections-looker"
