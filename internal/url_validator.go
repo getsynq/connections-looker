@@ -23,7 +23,7 @@ func UrlValidator(val interface{}) error {
 	}
 
 	if u.Host == "" || u.Scheme == "" {
-		return errors.New("Full URL is required, e.g. `https://prod-uk-a.online.tableau.com`")
+		return errors.New("Full URL is required, e.g. `https://example.com`")
 	}
 
 	return nil
